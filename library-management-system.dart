@@ -126,10 +126,9 @@ class Library {
     Member member = Member(memberName, memberId);
     DateTime loanDate = DateTime.now();
     DateTime returnDate =
-        loanDate.add(Duration(days: 14)); // Example return date after 2 weeks
-
+        loanDate.add(Duration(days: 14)); 
     Loan loan = Loan(member, bookToLoan, loanDate, returnDate);
-    bookToLoan.isAvailable = false; // Mark the book as not available
+    bookToLoan.isAvailable = false; 
 
     // Add loan manager for this member
     loanManagers.add(MemberLoanManager(member, loan));
